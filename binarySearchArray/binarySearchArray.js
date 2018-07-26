@@ -11,6 +11,18 @@
  */
 
 var binarySearch = function (array, target) {
-  
+  var min = 0;
+  var max= array.length-1 ;
+
+  while(min<=max){
+  	var res=Math.floor((min+max)/2)
+  	if(array[res]===target){
+  		return res
+  }else if(array[res]< target){
+    min=res+1;
+  }else 
+  	max=res-1
+  }
+  return ("the target is not found")
 };
 
